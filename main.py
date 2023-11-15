@@ -2,6 +2,8 @@ from functions import *
 
 A = [[0,0,0],[0,0,0],[0,0,0]]
 
+oudeMatricesA = []
+
 A[0][0] = int(input('Coëfficient bij x^2? '))
 A[1][1] = int(input('Coëfficient bij y^2? '))
 A[2][2] = int(input('Coëfficient bij z^2? '))
@@ -40,4 +42,6 @@ aard = classificeer(d,D)
 
 print(aarden[aard])
 
-if A[0][1] != 0: A = xyWegwerken(A)
+if A[0][1] != 0:
+    oudeMatricesA.append(A)
+    A = xyWegwerken(A)
