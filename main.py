@@ -24,15 +24,15 @@ print(D)
 aard = 0
 alleAarden = [
     "error",
-    "reële ellips",
-    "imaginaire ellips",
-    "ontaarde ellips",
-    "reële hyperbool",
-    "ontaarde hyperbool",
-    "reële parabool",
-    "ontaarde parabool van 2 evenwijdige reële rechten",
-    "ontaarde parabool van 2 evenwijdige toegevoeg imaginaire rechten",
-    "ontaarde parabool van 2 samenvallende rechten"
+    "reële ellips",                                                             # x^2 + y^2 = 1
+    "imaginaire ellips",                                                        # x^2 + y^2 = -1
+    "ontaarde ellips",                                                          # x^2 + y^2 = 0
+    "reële hyperbool",                                                          # x^2 - y^2 = 1
+    "ontaarde hyperbool",                                                       # x^2 - y^2 = 0
+    "reële parabool",                                                           # y = x^2
+    "ontaarde parabool van 2 evenwijdige reële rechten",                        # x^2 = 1
+    "ontaarde parabool van 2 evenwijdige toegevoeg imaginaire rechten",         # x^2 = -1
+    "ontaarde parabool van 2 samenvallende rechten"                             # x^2 = 0
 ]
 
 if d > 0: #ellips
@@ -51,4 +51,4 @@ elif d == 0: #parabool
 
 print(alleAarden[aard])
 
-wegMetDie_xy_term(A)
+if A[0][1] != 0: A = wegMetDie_xy_term(A)
