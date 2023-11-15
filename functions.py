@@ -24,4 +24,5 @@ def classificeer(A, d, D):
     return aard
 
 def xyWegwerken(A):
-    pass
+    nieuweA = A
+    return nieuweA
