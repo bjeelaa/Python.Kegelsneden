@@ -38,7 +38,7 @@ aarden = [
 ]
 
 #TODO gebruik later de aard als controle!
-aard = classificeer(d,D)
+aard = classificeer(A, d, D)
 
 print(aarden[aard])
 
