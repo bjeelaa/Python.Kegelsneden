@@ -4,17 +4,21 @@ A = [[0,0,0],[0,0,0],[0,0,0]]
 
 oudeMatricesA = []
 
-A[0][0] = int(input('Coëfficient bij x^2? '))
-A[1][1] = int(input('Coëfficient bij y^2? '))
-A[2][2] = int(input('Coëfficient bij z^2? '))
-A[0][1] = int(input('Coëfficient bij xy?  '))/2
-A[1][0] = A[0][1]
-A[0][2] = int(input('Coëfficient bij xz?  '))/2
-A[2][0] = A[0][2]
-A[1][2] = int(input('Coëfficient bij yz?  '))/2
-A[2][1] = A[1][2]
+a = int(input('Coëfficient bij x^2? '))
+a1 = int(input('Coëfficient bij y^2? '))
+a2 = int(input('Coëfficient bij z^2? '))
+b2 = int(input('Coëfficient bij xy?  '))/2
+b1 = int(input('Coëfficient bij xz?  '))/2
+b = int(input('Coëfficient bij yz?  '))/2
 
-d = det2x2([[A[0][0], A[0][1]], [A[1][0], A[1][1]]])
+A = [
+    [a,b2,b1],
+    [b2,a1,b],
+    [b1,b,a2]
+]
+
+d = det2x2([[a, b2], 
+            [a1, b2]])
 D = det3x3(A)
 
 print(A[0])
@@ -38,10 +42,10 @@ aarden = [
 ]
 
 #TODO gebruik later de aard als controle!
-aard = classificeer(A, d, D)
+aard = classificeer(a, d, D)
 
 print(aarden[aard])
 
-if A[0][1] != 0:
+if b2 != 0:
     oudeMatricesA.append(A)
     A = xyWegwerken(A)
