@@ -2,7 +2,7 @@ from functions import *
 
 A = [[0,0,0],[0,0,0],[0,0,0]]
 
-oudeMatricesA = []
+oudeVglK = []
 
 K = {
     "a": int(input('Coëfficient bij x^2? ')),
@@ -24,12 +24,12 @@ A = [
 d = det2x2([[a, b2], [a1, b2]])
 D = det3x3(A)
 
-print('D =')
-print('  ' + str(A[0]))
-print('  ' + str(A[1]))
-print('  ' + str(A[2]))
-print('δ = ' + str(d))
-print('Δ = ' + str(D))
+print('D =' + '\n' + 
+      '  ' + str(A[0]) + '\n' + 
+      '  ' + str(A[1]) + '\n' + 
+      '  ' + str(A[2]) + '\n' + 
+      'δ = ' + str(d) + '\n' + 
+      'Δ = ' + str(D))
 
 aard = 0
 aarden = [
@@ -51,5 +51,5 @@ aard = classificeer(a, d, D)
 print('De kegelsnede is een prachtige ' + aarden[aard])
 
 if b2 != 0:
-    oudeMatricesA.append(A)
+    oudeVglK.append(K)
     A = xyWegwerken(A)
