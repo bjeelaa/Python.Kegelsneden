@@ -1,8 +1,6 @@
 from functions import *
 
-A = [[0,0,0],[0,0,0],[0,0,0]]
-
-oudeVglK = []
+oudeK = []
 
 K = {
     "a": int(input('Coëfficient bij x^2? ')),
@@ -14,14 +12,9 @@ K = {
 }
 
 a, a1, a2, b2, b1, b = list(K.values())
+A = KgsnNaarMatrix(K)
 
-A = [
-    [a,b2,b1],
-    [b2,a1,b],
-    [b1,b,a2]
-]
-
-d = det2x2([[a, b2], [a1, b2]])
+d = det2x2([[a, b2], [b2, a1]])
 D = det3x3(A)
 
 print('D =' + '\n' + 
@@ -51,5 +44,5 @@ aard = classificeer(a, d, D)
 print('De kegelsnede is een prachtige ' + aarden[aard])
 
 if b2 != 0:
-    oudeVglK.append(K)
-    A = xyWegwerken(A)
+    oudeK.append(K)
+    K = xyWegwerken(K)
